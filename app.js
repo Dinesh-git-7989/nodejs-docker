@@ -1,0 +1,6 @@
+var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write('<html><head><style>body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh}.container{text-align:center;background:white;padding:50px;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.3);animation:fadeIn 0.8s ease-in}@keyframes fadeIn{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}h1{color:#667eea;margin:0;font-size:2.5em}p{color:#666;font-size:1.1em;margin:10px 0}.emoji{font-size:3em;margin:20px 0}.success{color:#4caf50;font-weight:bold;font-size:1.3em}</style></head><body><div class=\"container\"><div class=\"emoji\">🚀</div><h1>Hey my app was deployed :)</h1><p class=\"success\">Your Node.js Docker container is running successfully!</p><p>Server is listening on port 80</p><div class=\"emoji\">✨</div></div></body></html>');
+    res.end();
+}).listen(80);
